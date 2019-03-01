@@ -1,0 +1,122 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190301071051
+Username: MISAG\ljack099
+RunAs User: MISAG\ljack099
+Configuration Name: 
+Machine: MISAGMCBA304839 (Microsoft Windows NT 10.0.17134.0)
+Host Application: powershell.exe
+Process ID: 17532
+PSVersion: 5.1.17134.407
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.407
+BuildVersion: 10.0.17134.407
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Face_detection_program.txt
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv install scikit-learn scikit-imageopencv-python
+[pipenv.exceptions.ResolutionFailure]:   File "c:\python\lib\site-packages\pipenv\utils.py", line 480, in actually_resolve_deps
+[pipenv.exceptions.ResolutionFailure]:       resolved_tree = resolver.resolve()
+[pipenv.exceptions.ResolutionFailure]:   File "c:\python\lib\site-packages\pipenv\utils.py", line 395, in resolve
+[pipenv.exceptions.ResolutionFailure]:       raise ResolutionFailure(message=str(e))
+[pipenv.exceptions.ResolutionFailure]:       pipenv.exceptions.ResolutionFailure: ERROR: ERROR: Could not find a version that matches sci
+kit-imageopencv-python
+[pipenv.exceptions.ResolutionFailure]:       No versions found
+[pipenv.exceptions.ResolutionFailure]: Warning: Your dependencies could not be resolved. You likely have a mismatch in your sub-dependenc
+ies.
+  First try clearing your dependency cache with $ pipenv lock --clear, then try the original command again.
+ Alternatively, you can use $ pipenv install --skip-lock to bypass this mechanism, then run $ pipenv graph to inspect the situation.
+  Hint: try $ pipenv lock --pre if it is a pre-release dependency.
+ERROR: ERROR: Could not find a version that matches scikit-imageopencv-python
+No versions found
+Was https://pypi.org/simple reachable?
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv install scikit-learn
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv lock --clear
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> cls
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> ls
+
+
+    Directory: C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         3/1/2019   7:16 AM           2136 Face_detection_program.txt
+-a----         3/1/2019   7:16 AM            189 Pipfile
+-a---l         3/1/2019   7:05 AM            160 README.md
+
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> rm .\Pipfile
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> ls
+
+
+    Directory: C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         3/1/2019   7:17 AM           2996 Face_detection_program.txt
+-a---l         3/1/2019   7:05 AM            160 README.md
+
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv install scikit-image
+Adding scikit-image to Pipfile's [packages]…
+Installation Succeeded
+Pipfile.lock not found, creating…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+Success!
+Updated Pipfile.lock (c73dd2)!
+Installing dependencies from Pipfile.lock (c73dd2)…
+  ================================ 10/10 - 00:00:09
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv install scikit-learn
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv install opencv-python
+
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> cls
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> pipenv run python .\detect.py
+Traceback (most recent call last):
+  File ".\detect.py", line 7, in <module>
+    grayscale_image = cv.cvtColor(original_image, cv.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.0.0) C:\projects\opencv-python\opencv\modules\imgproc\src\color.cpp:181: error: (-215:Assertion failed) !_src.empty()
+ in function 'cv::cvtColor'
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> python
+oloredMulti', 'fastNlMeansDenoisingMulti', 'fillConvexPoly', 'fillPoly', 'filter2D', 'filterHomographyDecompByVisibleRefpoints', 'filterS
+peckles', 'findChessboardCorners', 'findChessboardCornersSB', 'findCirclesGrid', 'findContours', 'findEssentialMat', 'findFundamentalMat'
+, 'findHomography', 'findNonZero', 'findTransformECC', 'fisheye', 'fitEllipse', 'fitEllipseAMS', 'fitEllipseDirect', 'fitLine', 'flann',
+'flann_Index', 'flip', 'floodFill', 'gemm', 'getAffineTransform', 'getBuildInformation', 'getCPUTickCount', 'getDefaultNewCameraMatrix',
+'getDerivKernels', 'getFontScaleFromHeight', 'getGaborKernel', 'getGaussianKernel', 'getHardwareFeatureName', 'getNumThreads', 'getNumber
+OfCPUs', 'getOptimalDFTSize', 'getOptimalNewCameraMatrix', 'getPerspectiveTransform', 'getRectSubPix', 'getRotationMatrix2D', 'getStructu
+ringElement', 'getTextSize', 'getThreadNum', 'getTickCount', 'getTickFrequency', 'getTrackbarPos', 'getValidDisparityROI', 'getVersionMaj
+or', 'getVersionMinor', 'getVersionRevision', 'getVersionString', 'getWindowImageRect', 'getWindowProperty', 'goodFeaturesToTrack', 'grab
+Cut', 'groupRectangles', 'haarcascades', 'haveImageReader', 'haveImageWriter', 'haveOpenVX', 'hconcat', 'idct', 'idft', 'illuminationChan
+ge', 'imdecode', 'imencode', 'importlib', 'imread', 'imreadmulti', 'imshow', 'imwrite', 'inRange', 'initCameraMatrix2D', 'initUndistortRe
+ctifyMap', 'inpaint', 'insertChannel', 'instr', 'integral', 'integral2', 'integral3', 'intersectConvexConvex', 'invert', 'invertAffineTra
+nsform', 'ipp', 'isContourConvex', 'kmeans', 'line', 'linearPolar', 'log', 'logPolar', 'magnitude', 'matMulDeriv', 'matchShapes', 'matchT
+emplate', 'max', 'mean', 'meanShift', 'meanStdDev', 'medianBlur', 'merge', 'min', 'minAreaRect', 'minEnclosingCircle', 'minEnclosingTrian
+gle', 'minMaxLoc', 'mixChannels', 'ml', 'ml_ANN_MLP', 'ml_Boost', 'ml_DTrees', 'ml_EM', 'ml_KNearest', 'ml_LogisticRegression', 'ml_Norma
+lBayesClassifier', 'ml_ParamGrid', 'ml_RTrees', 'ml_SVM', 'ml_SVMSGD', 'ml_StatModel', 'ml_TrainData', 'moments', 'morphologyEx', 'moveWi
+ndow', 'mulSpectrums', 'mulTransposed', 'multiply', 'namedWindow', 'norm', 'normalize', 'ocl', 'ocl_Device', 'ogl', 'os', 'patchNaNs', 'p
+encilSketch', 'perspectiveTransform', 'phase', 'phaseCorrelate', 'pointPolygonTest', 'polarToCart', 'polylines', 'pow', 'preCornerDetect'
+, 'projectPoints', 'putText', 'pyrDown', 'pyrMeanShiftFiltering', 'pyrUp', 'randShuffle', 'randn', 'randu', 'readOpticalFlow', 'recoverPo
+se', 'rectangle', 'rectify3Collinear', 'redirectError', 'reduce', 'remap', 'repeat', 'reprojectImageTo3D', 'resize', 'resizeWindow', 'rot
+ate', 'rotatedRectangleIntersection', 'samples', 'sampsonDistance', 'scaleAdd', 'seamlessClone', 'selectROI', 'selectROIs', 'sepFilter2D'
+, 'setIdentity', 'setMouseCallback', 'setNumThreads', 'setRNGSeed', 'setTrackbarMax', 'setTrackbarMin', 'setTrackbarPos', 'setUseOpenVX',
+ 'setUseOptimized', 'setWindowProperty', 'setWindowTitle', 'solve', 'solveCubic', 'solveLP', 'solveP3P', 'solvePnP', 'solvePnPRansac', 's
+olvePoly', 'sort', 'sortIdx', 'spatialGradient', 'split', 'sqrBoxFilter', 'sqrt', 'startWindowThread', 'stereoCalibrate', 'stereoCalibrat
+eExtended', 'stereoRectify', 'stereoRectifyUncalibrated', 'stylization', 'subtract', 'sumElems', 'textureFlattening', 'threshold', 'trace
+', 'transform', 'transpose', 'triangulatePoints', 'undistort', 'undistortPoints', 'undistortPointsIter', 'useOpenVX', 'useOptimized', 'ut
+ils', 'validateDisparity', 'vconcat', 'videoio_registry', 'waitKey', 'waitKeyEx', 'warpAffine', 'warpPerspective', 'warpPolar', 'watershe
+d', 'writeOpticalFlow']
+>>> exit()
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> cls
+PS C:\Users\ljack099\OneDrive - Ascension\Programming\Python\RealPythonTutorials\Face-detection> git add .
+warning: CRLF will be replaced by LF in Face_detection_program.txt.
+The file will have its original line endings in your working directory
+warning: CRLF will be replaced by LF in detect.py.
+The file will have its original line endings in your working directory
